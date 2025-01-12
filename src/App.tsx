@@ -71,9 +71,10 @@ const App = () => {
         camera={{ position: [0, 3, 20], fov: 15 }} // Start far away
       >
         {/* Lights */}
-        <ambientLight intensity={0.5} />
-        <spotLight position={[10, 10, 10]} angle={0.2} penumbra={1} intensity={2} castShadow />
-        <directionalLight position={[-5, 5, 5]} intensity={1} castShadow />
+        <ambientLight intensity={1.0} />  {/* Increased ambient light */}
+        <spotLight position={[10, 10, 10]} angle={0.2} penumbra={1} intensity={5} castShadow />  {/* Increased spot light intensity */}
+        <directionalLight position={[-5, 5, 5]} intensity={2} castShadow />  {/* Increased directional light intensity */}
+
 
         {/* Model */}
         <Model url="/models/animation_movement.glb" />
